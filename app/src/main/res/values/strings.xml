@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">First lab</string>
     <string name="splash_text">WordsFactory</string>
+    <string name="onboard_header1">Learn anytime \nand anywhere</string>
+    <string name="onboard_text1">Quarantine is the perfect time to spend your \nday learning something new, from anywhere!</string>
+    <string name="onboard_header2">Find a course \nfor you</string>
+    <string name="onboard_text2">Quarantine is the perfect time to spend your \nday learning something new, from anywhere!</string>
+    <string name="onboard_header3">Improve your skills</string>
+    <string name="onboard_text3">Quarantine is the perfect time to spend your \nday learning something new, from anywhere!</string>
+    <string name="skip_text">Skip</string>
+    <string name="onboard_button1">Next</string>
+    <string name="onboard_button2">Next</string>
+    <string name="onboard_button3">"Let's Start"</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
