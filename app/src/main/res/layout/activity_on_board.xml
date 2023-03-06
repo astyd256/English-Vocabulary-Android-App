@@ -44,7 +44,7 @@
         android:paddingBottom="0dp"
         android:text="@string/skip_text"
         android:textAllCaps="false"
-        android:textColor="@color/InkDarkGray0"
+        android:textColor="@color/inkdarkgray"
         app:iconPadding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

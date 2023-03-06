@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="InkDark">#3C3A36</color>
-    <color name="InkDarkGray0">#78746D</color>
-    <color name="Orange">#E3562A</color>
-    <color name="teal_200">#FF03DAC5</color>
+    <color name="inkdark">#3C3A36</color>
+    <color name="inkdarkgray">#78746D</color>
+    <color name="orange">#E3562A</color>
+    <color name="inkgray">#BEBAB3</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>

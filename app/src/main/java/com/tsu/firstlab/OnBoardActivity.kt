@@ -1,9 +1,8 @@
 package com.tsu.firstlab
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.tsu.firstlab.databinding.ActivityOnBoardBinding
 
@@ -18,7 +17,6 @@ class OnBoardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_on_board)
 
         binding = ActivityOnBoardBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -47,11 +45,17 @@ class OnBoardActivity : AppCompatActivity() {
             if(currentPageIndex < 2) {
                 currentPageIndex++
                 viewPager.setCurrentItem(currentPageIndex, true)
+            } else if (currentPageIndex == 2) {
+                val intent = Intent(this, SignUpActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
 
         binding.buttonSkip.setOnClickListener{
-
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 

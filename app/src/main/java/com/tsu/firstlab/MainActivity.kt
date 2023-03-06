@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        setContentView(R.layout.activity_main)
 
         Handler().postDelayed({
             val intent = Intent(this, OnBoardActivity::class.java)
