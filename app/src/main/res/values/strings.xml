@@ -18,5 +18,22 @@
     <string name="passwordfield_hint">Password</string>
     <string name="signup_button">Sign up</string>
     <string name="login_button">Log in</string>
-
+    <string name="dictionary_button">Add to Dictionary</string>
+    <string name="dictionary_search_hint">Cooking</string>
+    <string name="dictionary_word_header_template">Cooking</string>
+    <string name="dictionary_transcription_template">[ˈkʊkɪŋ]</string>
+    <string name="dictionary_partofspeech_header_templater">Part of Speech:</string>
+    <string name="dictionary_partofspeech_template">Noun</string>
+    <string name="dictionary_meanings_header_template">Meanings:</string>
+    <string name="dictionary_meanings_example1_description_template">The practice or skill of preparing food by
+    \ncombining, mixing, and heating ingredients.</string>
+    <string name="dictionary_meanings_example1_template"><font color='#65AAEA'>Example:</font> he developed an interest in cooking.</string>
+    <string name="dictionary_meanings_example2_description_template">The practice or skill of preparing food by\n
+    combining, mixing, and heating ingredients.</string>
+    <string name="dictionary_meanings_example2_template"><font color='#65AAEA'>Example:</font> he developed an interest in cooking.</string>
+    <string name="dictionary_navbar_button1">Dictionary</string>
+    <string name="dictionary_navbar_button2">Training</string>
+    <string name="dictionary_navbar_button3">Video</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

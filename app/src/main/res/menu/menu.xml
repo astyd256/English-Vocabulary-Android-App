@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dictionary"
+        android:icon="@drawable/dictionary"
+        android:title="@string/dictionary_navbar_button1"/>
+    <item
+        android:id="@+id/training"
+        android:icon="@drawable/training"
+        android:title="@string/dictionary_navbar_button2"/>
+    <item
+        android:id="@+id/video"
+        android:icon="@drawable/video"
+        android:title="@string/dictionary_navbar_button3"/>
+</menu>

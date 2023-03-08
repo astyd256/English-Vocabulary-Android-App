@@ -12,7 +12,7 @@
         android:theme="@style/Theme.FirstLab"
         tools:targetApi="31">
         <activity
-            android:name=".DictionaryActivity"
+            android:name=".MainMenuActivity"
             android:exported="false" />
         <activity
             android:name=".SignUpActivity"

@@ -66,6 +66,7 @@
             android:background="@android:color/transparent"
             android:fontFamily="@font/rubik"
             android:hint="@string/namefield_hint"
+            android:inputType="textPersonName"
             android:singleLine="false"
             android:textColor="@color/inkdarkgray" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -89,6 +90,7 @@
             android:background="@android:color/transparent"
             android:fontFamily="@font/rubik"
             android:hint="@string/emailfield_hint"
+            android:inputType="textWebEmailAddress"
             android:textColor="@color/inkdarkgray" />
     </com.google.android.material.textfield.TextInputLayout>
 

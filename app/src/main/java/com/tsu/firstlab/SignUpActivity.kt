@@ -21,7 +21,7 @@ class SignUpActivity : AppCompatActivity() {
             if (binding.emailInputEditText.text.toString().isNotEmpty() &&
                     binding.nameInputEditText.text.toString().isNotEmpty() &&
                     binding.passwordInputEditText.text.toString().isNotEmpty()) {
-                val intent = Intent(this, DictionaryActivity::class.java)
+                val intent = Intent(this, MainMenuActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
