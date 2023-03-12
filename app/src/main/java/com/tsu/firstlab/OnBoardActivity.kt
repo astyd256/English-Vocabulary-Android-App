@@ -48,14 +48,12 @@ class OnBoardActivity : AppCompatActivity() {
             } else if (currentPageIndex == 2) {
                 val intent = Intent(this, SignUpActivity::class.java)
                 startActivity(intent)
-                finish()
             }
         }
 
         binding.buttonSkip.setOnClickListener{
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 

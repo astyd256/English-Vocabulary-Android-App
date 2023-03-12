@@ -11,22 +11,18 @@ import com.tsu.firstlab.fragments.VideoFragment
 
 class MainMenuActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainMenuBinding
-    private val DictionaryFragment = DictionaryFragment()
-    private val TrainingFragment = TrainingFragment()
-    private val VideoFragment = VideoFragment()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainMenuBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        replaceFragment(DictionaryFragment)
+        replaceFragment(DictionaryFragment())
 
         binding.bottomMenu.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.dictionary -> replaceFragment(DictionaryFragment)
-                R.id.training -> replaceFragment(TrainingFragment)
-                R.id.video -> replaceFragment(VideoFragment)
+                R.id.dictionary -> replaceFragment(DictionaryFragment())
+                R.id.training -> replaceFragment(TrainingFragment())
+                R.id.video -> replaceFragment(VideoFragment())
             }
             true
         }
