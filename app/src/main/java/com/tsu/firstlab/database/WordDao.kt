@@ -17,4 +17,8 @@ interface WordDao  {
     @Query("SELECT * FROM word WHERE word = :word")
     fun findWordWithMeanings(word: String): List<WordWithMeanings>
 
+    @Transaction
+    @Query("SELECT COUNT(*) FROM word ")
+    fun getSize(): Int
+
 }

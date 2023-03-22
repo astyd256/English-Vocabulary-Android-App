@@ -35,4 +35,6 @@
     <string name="dictionary_navbar_button2">Training</string>
     <string name="dictionary_navbar_button3">Video</string>
     <string name="example_string"><font color='#65AAEA'>Example: </font></string>
+    <string name="training_button">Start</string>
+    <string name="training_header">There are <font color='#E3562A'>25</font> words\nin your Dictionary.\n\nStart the Training?</string>
 </resources>
