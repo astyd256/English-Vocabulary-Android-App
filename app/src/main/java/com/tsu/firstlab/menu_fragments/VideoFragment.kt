@@ -1,4 +1,4 @@
-package com.tsu.firstlab.fragments
+package com.tsu.firstlab.menu_fragments
 
 import android.net.Uri
 import android.os.Bundle

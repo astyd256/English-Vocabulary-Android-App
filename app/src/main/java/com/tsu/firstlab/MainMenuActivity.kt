@@ -5,9 +5,9 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.tsu.firstlab.databinding.ActivityMainMenuBinding
 import com.tsu.firstlab.databinding.FragmentDictionaryBinding
-import com.tsu.firstlab.fragments.DictionaryFragment
-import com.tsu.firstlab.fragments.TrainingFragment
-import com.tsu.firstlab.fragments.VideoFragment
+import com.tsu.firstlab.menu_fragments.DictionaryFragment
+import com.tsu.firstlab.menu_fragments.TrainingFragment
+import com.tsu.firstlab.menu_fragments.VideoFragment
 
 class MainMenuActivity : AppCompatActivity() {
     private lateinit var mainMenuBinding: ActivityMainMenuBinding

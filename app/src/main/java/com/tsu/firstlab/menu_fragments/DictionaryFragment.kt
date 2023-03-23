@@ -1,4 +1,4 @@
-package com.tsu.firstlab.fragments
+package com.tsu.firstlab.menu_fragments
 
 import android.content.Context
 import android.media.AudioManager
@@ -94,7 +94,7 @@ class DictionaryFragment : Fragment() {
                 if (arr.getJSONObject(0).has("word"))
                  wordHeader = arr.getJSONObject(0).getString("word")
 
-                if (arr.getJSONObject(0).has("phonetics"))
+                if (arr.getJSONObject(0).has("phonetics") && arr.getJSONObject(0).getJSONArray("phonetics").length() > 0)
                 {
                     if (arr.getJSONObject(0).getJSONArray("phonetics").getJSONObject(0).has("text"))
                     {
@@ -110,10 +110,10 @@ class DictionaryFragment : Fragment() {
                 phonetic = "[${arr.getJSONObject(0).getString("phonetic").replace("/", "")}]"
 
                 if (arr.getJSONObject(0).getJSONArray("meanings").getJSONObject(0).has("partOfSpeech"))
-                partOfSpeech = arr.getJSONObject(0).getJSONArray("meanings")
+                    partOfSpeech = arr.getJSONObject(0).getJSONArray("meanings")
                     .getJSONObject(0).getString("partOfSpeech")
 
-                curWord = Word(wordHeader, phonetic, partOfSpeech, soundURL)
+                curWord = Word(wordHeader, phonetic, partOfSpeech, soundURL, 0)
 
                 var definition : String
                 var example : String
@@ -146,7 +146,7 @@ class DictionaryFragment : Fragment() {
                 error ->
                 if (!checkForInternet())
                 {
-                    GlobalScope.launch {
+                    suspend {
                         curWord = dao.findByWord(word)
                         val curWordWithMeanings = dao.findWordWithMeanings(word)
 

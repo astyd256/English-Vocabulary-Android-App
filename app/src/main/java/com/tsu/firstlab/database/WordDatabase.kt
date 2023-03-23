@@ -1,15 +1,20 @@
 package com.tsu.firstlab.database
 
 import android.content.Context
+import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(
+    version = 2,
     entities = [
         Word :: class,
         Meaning :: class
-                ], version = 1
+                ],
+    autoMigrations = [
+        AutoMigration (from = 1, to = 2)
+    ]
 )
 abstract class WordDatabase : RoomDatabase(){
 

@@ -49,9 +49,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameInputLayout"
-        android:layout_width="343dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/edittextborder"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
@@ -73,9 +75,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInputLayout"
-        android:layout_width="343dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/edittextborder"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
@@ -96,17 +100,19 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInputLayout"
-        android:layout_width="343sp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/edittextborder"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailInputLayout"
         app:passwordToggleDrawable="@drawable/selector"
-        app:passwordToggleEnabled="true"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp">
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordInputEditText"
@@ -122,9 +128,11 @@
 
     <Button
         android:id="@+id/signUpButton"
-        android:layout_width="343dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="@string/signup_button"
@@ -160,8 +168,8 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="48sp"
         android:layout_height="48sp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:paddingLeft="19dp"
