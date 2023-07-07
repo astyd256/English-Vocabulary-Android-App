@@ -3,6 +3,21 @@
 This is a mobile application for smartphones that helps users improve their English vocabulary.
 The app is made as part of a series of lab assignments for the Android programming course in the Tomsk State University and was designed to support Android 8.0 and newer versions.
 
+## Table of Contents
+
+
+- [English Vocabulary App (University Android Course Project)](#english-vocabulary-app-university-android-course-project)
+  - [Table of Contents](#table-of-contents)
+  - [Features (Lab 1)](#features-lab-1)
+  - [Additional Features (Lab 2)](#additional-features-lab-2)
+  - [Additional Features (Lab 3)](#additional-features-lab-3)
+  - [Getting Started](#getting-started)
+  - [Development](#development)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+  - [Contacts](#contacts)
+
+
 ## Features (Lab 1)
 
 - Launch Screen: The app displays a logo in the center of the screen upon startup.
