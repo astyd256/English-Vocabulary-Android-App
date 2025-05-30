@@ -5,12 +5,27 @@ The app is made as part of a series of lab assignments for the Android programmi
 
 ## Table of Contents
 
-
 - [English Vocabulary App (University Android Course Project)](#english-vocabulary-app-university-android-course-project)
   - [Table of Contents](#table-of-contents)
-  - [Features (Lab 1)](#features-lab-1)
-  - [Additional Features (Lab 2)](#additional-features-lab-2)
-  - [Additional Features (Lab 3)](#additional-features-lab-3)
+  - [Core Features (Lab 1)](#core-features-lab-1)
+    - [1. Launch Screen](#1-launch-screen)
+    - [2. Onboarding Flow](#2-onboarding-flow)
+    - [3. User Registration \& Validation](#3-user-registration--validation)
+    - [4. Dictionary Lookup](#4-dictionary-lookup)
+    - [5. Video Content Viewer](#5-video-content-viewer)
+  - [Enhanced Features (Lab 2)](#enhanced-features-lab-2)
+    - [1. Advanced Dictionary Search](#1-advanced-dictionary-search)
+    - [2. Word Audio Playback](#2-word-audio-playback)
+    - [3. Word Bookmarking (Offline Saving)](#3-word-bookmarking-offline-saving)
+    - [4. Offline Mode Support](#4-offline-mode-support)
+    - [5. Error Handling](#5-error-handling)
+  - [Learning \& Testing Features (Lab 3)](#learning--testing-features-lab-3)
+    - [1. Interactive Learning Screen](#1-interactive-learning-screen)
+    - [2. Adaptive Learning Algorithm](#2-adaptive-learning-algorithm)
+    - [3. Empty State Handling](#3-empty-state-handling)
+    - [4. Saved Word Counter](#4-saved-word-counter)
+    - [5. Test Session Setup](#5-test-session-setup)
+    - [6. Smart Test Selection](#6-smart-test-selection)
   - [Getting Started](#getting-started)
   - [Development](#development)
   - [License](#license)
@@ -18,33 +33,96 @@ The app is made as part of a series of lab assignments for the Android programmi
   - [Contacts](#contacts)
 
 
-## Features (Lab 1)
+## Core Features (Lab 1)
 
-- Launch Screen: The app displays a logo in the center of the screen upon startup.
-- Onboarding Screens: The app provides onboarding screens with a gesture swipe or a "Next" button to introduce its features. Users can skip these screens by clicking "Skip".
-- Registration Screen: Users can register by filling in the required fields. The app validates the input and displays an error dialog if the fields are not properly filled. Users can toggle password visibility.
-- Dictionary Screen: Users can search for words in the dictionary. If the entered word is not found, a placeholder is displayed. The app sends a search request to the server and displays the retrieved results using a RecyclerView. Users can play the audio associated with a word.
-- Video Screen: The app displays a WebView that loads the webpage: https://learnenglish.britishcouncil.org/general-english/video-zone. Only navigation within this page and its child pages is allowed.
+### 1. Launch Screen
+- Displays a centered logo upon app startup.
 
-## Additional Features (Lab 2)
+### 2. Onboarding Flow
 
-- Dictionary Search: Users can search for words in the dictionary by clicking the magnifying glass icon and sending a request to the server. The app displays the retrieved results on the screen using a RecyclerView.
-- Audio Playback: Users can play the audio associated with a word by clicking the sound icon.
-- Word Bookmarking: Users can save a word and its information in the device's memory by clicking the "Add to Dictionary" button.
-- Offline Mode: If there is no internet connection, the app searches for the word among the saved words in the device's memory.
-- Error Handling: If an error occurs during server communication or due to the absence of internet access, the app displays an error dialog.
+- Introduces app features via swipeable screens or a "Next" button.
+- Includes a "Skip" option to bypass onboarding.
 
-API: 
-- The app uses the API `https://api.dictionaryapi.dev/api/v2/entries/en/` to retrieve word definitions. To retrieve a specific word, add it to the URL, for example: `https://api.dictionaryapi.dev/api/v2/entries/en/cooking`.
+### 3. User Registration & Validation
 
-## Additional Features (Lab 3)
+- Allows users to sign up by filling required fields.
+- Validates input and shows error dialogs for incorrect data.
+- Supports password visibility toggle.
 
-- Learning Screen: The app includes a learning screen where users can test their knowledge of the dictionary words.
-- Test Logic: The app keeps a record of the learning speed for each word, starting with a coefficient of 0 for new words. On correct answers, the coefficient is increased by 1, and on incorrect answers, it is decreased by 1. The test includes words with the lowest learning speed coefficient.
-- Empty Memory: If there are no saved words in the device's memory, the app displays a message instructing users to add words to the dictionary.
-- Word Count: The app displays the number of words saved in the device's memory.
-- Countdown Timer: When users click the "Start" button, a 5-second countdown begins (+1 second for the word "Go!"). The app displays an animation with a changing color circle matching the text color. After the countdown, a question screen is displayed.
-- Test Words Selection: The app selects 10 (or fewer if there are no saved words) words with the lowest learning speed coefficient from the device's memory.
+### 4. Dictionary Lookup
+
+- Enables word searches with real-time API requests.
+- Displays results in a RecyclerView.
+- Shows a placeholder if no word is found.
+- Includes audio playback for pronunciation.
+
+### 5. Video Content Viewer
+
+- Loads the British Council’s "Video Zone" [page](https://learnenglish.britishcouncil.org/general-english/video-zone) in a WebView.
+- Restricts navigation to this domain only.
+
+## Enhanced Features (Lab 2)
+
+### 1. Advanced Dictionary Search
+
+- Triggers API requests when users tap the search icon.
+- Dynamically updates results in RecyclerView.
+
+### 2. Word Audio Playback
+
+- Plays pronunciation audio when the sound icon is clicked.
+
+### 3. Word Bookmarking (Offline Saving)
+
+- Saves words & definitions to device storage via "Add to Dictionary" button.
+
+### 4. Offline Mode Support
+
+- If offline, searches locally saved words instead of fetching from API.
+
+### 5. Error Handling
+
+- Displays error dialogs for:
+
+  - Failed API requests.
+  - No internet connection.
+
+API Used:
+
+    https://api.dictionaryapi.dev/api/v2/entries/en/[word]
+    (Example: .../en/cooking fetches "cooking" definition.)
+
+## Learning & Testing Features (Lab 3)
+
+### 1. Interactive Learning Screen
+
+- Tests users on saved dictionary words.
+
+### 2. Adaptive Learning Algorithm
+
+- Tracks learning speed coefficient per word:
+  - +1 for correct answers.
+  - -1 for incorrect answers.
+- Prioritizes words with the lowest coefficients in tests.
+
+### 3. Empty State Handling
+
+- Shows a prompt if no words are saved: "Add words to dictionary first."
+
+### 4. Saved Word Counter
+
+- Displays the total count of bookmarked words.
+
+### 5. Test Session Setup
+
+- Starts a 5-second countdown (+1s for "Go!") upon clicking "Start".
+- Animates a color-changing circle synced with the timer.
+- After countdown, launches the question screen.
+
+### 6. Smart Test Selection
+
+- Selects up to 10 words with the lowest learning coefficients.
+- Adjusts to fewer words if the saved list is small.
 
 ## Getting Started
 
